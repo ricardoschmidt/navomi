@@ -17,7 +17,7 @@ submitted calls __analysis.py__.
 
 * __analysis.py__ is called by the HTML form in __landing.py__, which also
 provides an argument named *__thought__* containing the string entered by the
-user. This script sends this strings to Google's natural language API for
+user. This script sends this string to Google's natural language API for
 sentiment and entity analysis, and presents some customized (printed) output
 based on the input string.
 
