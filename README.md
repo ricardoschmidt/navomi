@@ -3,7 +3,8 @@
 ### Author
 
 Ricardo de O. Schmidt  
-July 14, 2017
+July 14, 2017  
+super.ismiti@gmail.com
 
 
 ### Description
