@@ -21,6 +21,12 @@ user. This script sends this string to Google's natural language API for
 sentiment and entity analysis, and presents some customized (printed) output
 based on the input string.
 
+The tasks performed by these scripts are those described in #3 and #4 of the
+provided list of tasks.  
+* _Task #3_: Use Google's Natural Language API to indicate the sentiment of a
+  given input sentence.  
+- _Task #4_: Use Google's Natural Language API to find entities of a given input
+  sentence and present the Wikipedia reference for them.
 
 ## Configuring
 
