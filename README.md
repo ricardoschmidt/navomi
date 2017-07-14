@@ -32,16 +32,16 @@ location:
 Apache has to be running and able to do CGI. Therefore, you have to uncomment
 the following line in httpd.conf:
 
-``LoadModule cgi_module libexec/apache2/mod_cgi.so
+<b>LoadModule cgi_module libexec/apache2/mod_cgi.so</b>
 
 httpd.conf can be found at:
 
-``/etc/apache2/
+<b>/etc/apache2/</b>
 
 ### Running
 
 To run this project, you have to open a web browser and access the following
 address:
 
-``http://localhost/cgi-bin/landing.py
+<b>http://localhost/cgi-bin/landing.py</b>
 
