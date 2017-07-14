@@ -11,12 +11,12 @@ July 14, 2017
 
 This project consists of two basic scripts in Python.
 
-* "landing.py" is the landing (initial) page, were a user can input whatever
+* __landing.py__ is the landing (initial) page, were a user can input whatever
 string to be further analyzed. This script simply prints a HTML form that, when
-submitted calls "analysis.py".
+submitted calls __analysis.py__.
 
-* "analysis.py" is called by the HTML form in "landing.py", which also
-provides an argument named "thought" containing the string entered by the
+* __analysis.py__ is called by the HTML form in __landing.py__, which also
+provides an argument named __thought__ containing the string entered by the
 user. This script sends this strings to Google's natural language API for
 sentiment and entity analysis, and presents some customized (printed) output
 based on the input string.
