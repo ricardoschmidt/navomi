@@ -27,7 +27,7 @@ based on the input string.
 The two scripts mentioned above have to be downloaded into the following
 location:
 
-``/Library/WebServer/CGI-Executables/
+<b>/Library/WebServer/CGI-Executables/</b>
 
 Apache has to be running and able to do CGI. Therefore, you have to uncomment
 the following line in httpd.conf:
