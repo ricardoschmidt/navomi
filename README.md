@@ -2,8 +2,7 @@
 
 ### Author
 
-Ricardo de O. Schmidt
-
+Ricardo de O. Schmidt  
 July 14, 2017
 
 
