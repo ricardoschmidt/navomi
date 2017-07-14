@@ -56,6 +56,11 @@ and run it as __sudo__:
 This is done by running the command (as sudo):  
 <b>sudo pip install --upgrade google-cloud-language --ignore-installed six</b>
 
+#### Configure libs location
+
+This might help avoiding problems with six libs. Simply run:  
+<b>export PYTHONPATH=/Library/Python/2.7/site-packages</b>
+
 
 ### Running
 
