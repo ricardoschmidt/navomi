@@ -24,23 +24,19 @@ based on the input string.
 ### Configuring
 
 The two scripts mentioned above have to be downloaded into the following
-location:
-
+location:  
 <b>/Library/WebServer/CGI-Executables/</b>
 
 Apache has to be running and able to do CGI. Therefore, you have to *__uncomment__*
-the following line in httpd.conf:
-
+the following line in httpd.conf:  
 <b>LoadModule cgi_module libexec/apache2/mod_cgi.so</b>
 
-httpd.conf can be found at:
-
+httpd.conf can be found at:  
 <b>/etc/apache2/</b>
 
 ### Running
 
 To run this project, you have to open a web browser and access the following
-address:
-
+address:  
 <b>http://localhost/cgi-bin/landing.py</b>
 
