@@ -51,8 +51,7 @@ elif score < 0: # negative
   message = 'Come on, being more positive can help improving your day!'
 
 # Output to be printed about the sentiment analysis
-html_return = """\
-  Content-Type: text/html\n
+html_return = """\Content-Type: text/html\n
   <html><body>
   <p>%s</p>
 """ % message
