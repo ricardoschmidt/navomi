@@ -46,7 +46,7 @@ elif score > 0.5: # super positive
 elif score > 0: # positive
   message = 'You seem to be following a positive vibe today!'
 elif score < -0.5: # super negative
-  message = 'Wow! Were do you keep all that anger?'
+  message = 'Wow! Where do you keep all that anger?'
 elif score < 0: # negative
   message = 'Come on, being more positive can help improving your day!'
 
