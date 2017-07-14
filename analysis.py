@@ -72,17 +72,17 @@ rep = requests.post(url, json_req)
 # Loads response into JSON format
 json_rep = json.loads(rep.text)
 
-
-# Find the results on entities
-wiki = 0
+# Get Wikipedia references that were returned, if any
+# and create a list of them as reading suggestion
 html_wiki = ''
 for ent in json_rep['entities']:
   if 'wikipedia_url' in ent['metadata']:
-    wiki+=1
     html_wiki += """\
       <li><a href="%s" target=_blank>%s</a><br></li>
     """ % (ent['metadata']['wikipedia_url'], ent['name'])
 
+# If Wikipedia references were found above,
+# then add them to the message to be printed
 if html_wiki != '':
   html_return += """\
     <p>Perhaps you might want to learn more about...</p><ul>
@@ -93,39 +93,6 @@ html_return += """\
   </ul></body></html>
 """
 
+# Finally, print the message
 print html_return
 
-
-# Print answer
-#print """\
-#  Content-Type: text/html\n
-#  <html><body>
-#  <p>%s</p>
-#  </body></html>
-#  """ % message
-
-
-
-## Replace with the correct URL
-#url = "http://api_url"
-#
-## It is a good practice not to hardcode the credentials. So ask the user to enter credentials at runtime
-#myResponse = requests.get(url,auth=HTTPDigestAuth(raw_input("username: "), raw_input("Password: ")), verify=True)
-##print (myResponse.status_code)
-#
-## For successful API call, response code will be 200 (OK)
-#if(myResponse.ok):
-#
-#    # Loading the response data into a dict variable
-#    # json.loads takes in only binary or string variables so using content to fetch binary content
-#    # Loads (Load String) takes a Json file and converts into python data structure (dict or list, depending on JSON)
-#    jData = json.loads(myResponse.content)
-#
-#    print("The response contains {0} properties".format(len(jData)))
-#    print("\n")
-#    for key in jData:
-#        print key + " : " + jData[key]
-#else:
-#  # If response code is not ok (200), print the resulting http error code with description
-#    myResponse.raise_for_status()
-#
