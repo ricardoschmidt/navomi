@@ -1,13 +1,13 @@
 # NAVOMI -- pre-interview task
 
---- Author ---
+#### Author
 
 Ricardo de O. Schmidt
 
 July 14, 2017
 
 
---- Description ---
+#### Description
 
 This project consists of two basic scripts in Python.
 
@@ -22,7 +22,7 @@ sentiment and entity analysis, and presents some customized (printed) output
 based on the input string.
 
 
---- Configuring ---
+#### Configuring
 
 The two scripts mentioned above have to be downloaded into the following
 location:
@@ -38,7 +38,10 @@ httpd.conf can be found at:
 
 ``/etc/apache2/
 
---- Running ---
+#### Running
 
-To run ...
+To run this project, you have to open a web browser and access the following
+address:
+
+``http://localhost/cgi-bin/landing.py
 
