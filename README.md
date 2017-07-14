@@ -29,7 +29,7 @@ location:
 
 <b>/Library/WebServer/CGI-Executables/</b>
 
-Apache has to be running and able to do CGI. Therefore, you have to uncomment
+Apache has to be running and able to do CGI. Therefore, you have to *__uncomment__*
 the following line in httpd.conf:
 
 <b>LoadModule cgi_module libexec/apache2/mod_cgi.so</b>
