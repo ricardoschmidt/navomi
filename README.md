@@ -1,13 +1,13 @@
 # NAVOMI -- pre-interview task
 
-### Author
+## Author
 
 Ricardo de O. Schmidt  
 July 14, 2017  
 super.ismiti@gmail.com
 
 
-### Description
+## Description
 
 This project consists of two basic scripts in Python.
 
@@ -22,18 +22,18 @@ sentiment and entity analysis, and presents some customized (printed) output
 based on the input string.
 
 
-### Configuring
+## Configuring
 
 The configuration below is for Mac OS.
 
-#### Web related
+### Web related
 
 The two scripts mentioned above have to be downloaded into the following
 location:  
 <b>/Library/WebServer/CGI-Executables/</b>  
 (This path is for Mac OS.)
 
-#### Apache
+### Apache
 
 Apache has to be running and able to do CGI. Therefore, you have to *__uncomment__*
 the following line in httpd.conf:  
@@ -44,25 +44,25 @@ httpd.conf can be found at:
 
 After doing so, you must restart Apache.
 
-#### Install pip
+### Install pip
 
 You have to install pip, and to do so use:  
 <b>wget https://bootstrap.pypa.io/get-pip.py</b>  
 and run it as __sudo__:  
 <b>sudo python get-pip.py</b>
 
-#### Install the gcloud natural language API client libs for Python
+### Install the gcloud natural language API client libs for Python
 
 This is done by running the command (as sudo):  
 <b>sudo pip install --upgrade google-cloud-language --ignore-installed six</b>
 
-#### Configure libs location
+### Configure libs location
 
 This might help avoiding problems with six libs. Simply run:  
 <b>export PYTHONPATH=/Library/Python/2.7/site-packages</b>
 
 
-### Running
+## Running
 
 To run this project, you have to open a web browser and access the following
 address:  
