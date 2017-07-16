@@ -13,6 +13,11 @@ import requests
 import json
 import cgi
 
+def smart_truncate(content, length=100, suffix='...'):
+  if len(content) <= length:
+    return content
+  else:
+    return ' '.join(content[:length+1].split(' ')[0:-1]) + suffix
 
 # Get the content user typed in the form in landing.py
 form = cgi.FieldStorage()
@@ -51,11 +56,8 @@ elif score < 0: # negative
   message = 'Come on, being more positive can help improving your day!'
 
 # Output to be printed about the sentiment analysis
-html_return = """\Content-Type: text/html\n
-  <html><body>
-  <p>%s</p>
-""" % message
-
+html_return = "Content-Type: application/json\n"
+json_return = {'response': message, 'entities': []}
 
 ### ENTITIES ANALYSIS ###
 
@@ -72,26 +74,30 @@ rep = requests.post(url, json_req)
 json_rep = json.loads(rep.text)
 
 # Get Wikipedia references that were returned, if any
-# and create a list of them as reading suggestion
-html_wiki = ''
+# and create a list of them as reading suggestion along with a text snippet, thumbnail and 
 for ent in json_rep['entities']:
   if 'wikipedia_url' in ent['metadata']:
-    html_wiki += """\
-      <li><a href="%s" target=_blank>%s</a><br></li>
-    """ % (ent['metadata']['wikipedia_url'], ent['name'])
+    subject = ent['metadata']['wikipedia_url'].replace('http://en.wikipedia.org/wiki/', '')
+    wikiAPI = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages%7Cextracts&redirects=1&formatversion=2&piprop=thumbnail&pithumbsize=150&pilimit=1&exintro=1&explaintext=1&titles=' + subject
+    rep = requests.get(wikiAPI)
+    json_rep = json.loads(rep.text)
+    
+    if 'thumbnail' in rep.text:
+      imgURL = json_rep['query']['pages'][0]['thumbnail']['source']
+    else:
+      imgURL = 'http://www.pbgnetworks.com/Style%20Library/PBGDesignModule/Images/no_image_found.jpg'
 
-# If Wikipedia references were found above,
-# then add them to the message to be printed
-if html_wiki != '':
-  html_return += """\
-    <p>Perhaps you might want to learn more about...</p><ul>
-  """
-  html_return += html_wiki
+    if 'extract' in rep.text:
+      wikiSnippet = smart_truncate(json_rep['query']['pages'][0]['extract'], length=1200)
+    else:
+      wikiSnippet = "Sorry, no information was found..."
 
-html_return += """\
-  </ul></body></html>
-"""
+    json_return['entities'].append({'name': ent['name'], 
+                                    'details': wikiSnippet,
+                                    'img': imgURL,
+                                    'url': ent['metadata']['wikipedia_url']})
+
+html_return = "Content-Type: application/json\n\n" + json.dumps(json_return)
 
 # Finally, print the message
 print html_return
-
