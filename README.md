@@ -9,11 +9,14 @@ super.ismiti@gmail.com
 
 ## Description
 
-This project consists of two basic scripts in Python.
+This project consists of one html file and two Python scripts:
 
-* __landing.py__ is the landing (initial) page, were a user can input whatever
-string to be further analyzed. This script simply prints a HTML form that, when
-submitted calls __analysis.py__.
+* __index.html__ contains the definitions of all forms and data presentation to
+  the user, using Angular to control the content and calls to the Python script
+  __analysis.py__ that actually communicates with the Google natural language API.
+
+* __landing.py__ is the landing (initial) page, that calls the above
+  __index.html__.
 
 * __analysis.py__ is called by the HTML form in __landing.py__, which also
 provides an argument named *__thought__* containing the string entered by the
