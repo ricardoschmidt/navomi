@@ -37,7 +37,7 @@ The configuration below is for Mac OS.
 
 ### Web related
 
-The two scripts mentioned above have to be downloaded into the following
+All the three files above mentioned have to be downloaded into the following
 location:  
 <b>/Library/WebServer/CGI-Executables/</b>  
 (This path is for Mac OS.)
