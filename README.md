@@ -13,7 +13,7 @@ This project consists of one html file and two Python scripts:
 
 * __index.html__ contains the definitions of all forms and data presentation to
   the user, using Angular to control the content and calls to the Python script
-  __analysis.py__ that actually communicates with the Google natural language API.
+  __analysis.py__ that actually communicates with the Google's natural language API.
 
 * __landing.py__ is the landing (initial) page, that calls the above
   __index.html__.
