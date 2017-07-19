@@ -150,7 +150,6 @@
               Since you are interested in <a href={{data.response.entities[0].url}} target=_blank>{{data.response.entities[0].name}}</a>, here is more information on the subject:
             </div>
             <div ng-if="data.response.entities.length > 1 && data.response.entities.length < 3">
-              Looks like you are also interested in <span ng-repeat="person in data.response.entities">{{person.name}}{{$last ? '' : ', '}}</span>. Here is more information on these subjects:
               Looks like you are also interested in <span ng-repeat="person in data.response.entities"><a href={{person.url}} target=_blank>{{person.name}}</a>{{$last ? '' : ', '}}</span>. Here is more information on these subjects:
             </div>
             <div ng-if="data.response.entities.length >= 3">
