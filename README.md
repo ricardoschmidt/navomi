@@ -65,6 +65,11 @@ and run it as __sudo__:
 This is done by running the command (as sudo):  
 <b>sudo pip install --upgrade google-cloud-language --ignore-installed six</b>
 
+### Install the Requests module for Python
+
+This is done by running the following command (as sudo):
+<b> sudo pip install requests</b>
+
 ### Configure libs location
 
 This might help avoiding problems with six libs. Simply run:  
