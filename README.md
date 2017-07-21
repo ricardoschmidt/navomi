@@ -67,7 +67,7 @@ This is done by running the command (as sudo):
 
 ### Install the Requests module for Python
 
-This is done by running the following command (as sudo):
+This is done by running the following command (as sudo):  
 <b> sudo pip install requests</b>
 
 ### Configure libs location
