@@ -3,8 +3,8 @@
 ## Author
 
 Ricardo de O. Schmidt  
-ricardo.schmidt@navomi.com
-August 18, 2017  
+ricardo.schmidt@navomi.com  
+August 18, 2017
 
 
 ## Description
