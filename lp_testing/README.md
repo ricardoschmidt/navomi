@@ -25,6 +25,6 @@ already installed Python. To do so, you have to run the following as __sudo__:
 
 ## Running
 
-To run this project, you have to run the following command:
+To run this project, you have to run the following command:  
 <b>python analysis.py</b>
 
