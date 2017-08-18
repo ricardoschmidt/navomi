@@ -9,8 +9,8 @@ August 18, 2017
 
 ## Description
 
-This sub-project contains a single Python script that makes some connectivity
-tests to the Live Person APIs.
+This sub-project contains a single Python script __analysis.py__ that makes some
+connectivity tests to the Live Person APIs.
 
 ## Configuring
 
