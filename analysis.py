@@ -28,7 +28,8 @@ thought = cgi.escape(thought) # not needed in this case, but helps preventing in
 
 # URL to access the Google's natural language API, specifically sentiment analysis
 # Using API key access
-url = 'https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyAHphLut5sU7BYpTkQUv55AReS5JABtw0I'
+google_key='AIzaSyAHphLut5sU7BYpTkQUv55AReS5JABtw90'
+url = 'https://language.googleapis.com/v1/documents:analyzeSentiment?key=' + google_key
 
 # JSON formatted request for sentiment analsyis
 json_req = '{"document":{"type":"PLAIN_TEXT","language":"EN","content":"' + thought + '"},"encodingType":"UTF8"}'
