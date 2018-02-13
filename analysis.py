@@ -63,7 +63,7 @@ json_return = {'response': message, 'entities': []}
 ### ENTITIES ANALYSIS ###
 
 # URL to access the entities analysis, using the same API key
-url = 'https://language.googleapis.com/v1/documents:analyzeEntities?key=AIzaSyAHphLut5sU7BYpTkQUv55AReS5JABtw0I'
+url = 'https://language.googleapis.com/v1/documents:analyzeEntities?key=' + google_key
 
 # JSON formatted request for entities analysis
 json_req = '{"encodingType":"UTF8","document":{"type":"PLAIN_TEXT","content":"' + thought + '"}}'
